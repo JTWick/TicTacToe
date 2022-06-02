@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class App {
 
-    //main method - creating the char "board" + checking if game finished
+    //main method - creating the char "board" + checking if game finished. printing board for player
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         char[][] board = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
@@ -14,12 +14,12 @@ public class App {
         printBoard(board);
         while (true) {
             playerTurn(board, scan);
-            if(isGameFinished(board)) {
+            if (isGameFinished(board)) {
                 break;
             }
             printBoard(board);
             computerTurn(board);
-            if(isGameFinished(board)) {
+            if (isGameFinished(board)) {
                 break;
             }
             printBoard(board);
