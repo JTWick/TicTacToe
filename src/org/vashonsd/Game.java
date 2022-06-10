@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Game {
     //creating the char "board" + checking if game finished. printing board for player
-    public static void game() {
+    public static void start() {
         Scanner scan = new Scanner(System.in);
         char[][] board = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
 
