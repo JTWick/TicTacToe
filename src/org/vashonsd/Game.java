@@ -7,27 +7,12 @@ public class Game {
 
     char[][] board;
 
+    //creates char board;
     public Game() {
         this.board = new char[][]{{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
     }
 
-    //creating the char "board" + checking if game finished. printing board for player
-//    public void start() {
-//        Scanner scan = new Scanner(System.in);
-//
-//        while (true) {
-//            playerTurn(board, scan);
-//            if (isGameFinished()) {
-//                break;
-//            }
-//            computerTurn(board);
-//            if (isGameFinished()) {
-//                break;
-//            }
-//        }
-//        scan.close();
-//    }
-
+    //checks if move is possible
     public String handle(int position) {
         if(isValidMove(position)) {
             placeMove(position, 'X');
@@ -76,7 +61,6 @@ public class Game {
         do {
             computerMove = rand.nextInt(9) + 1;
         } while (!isValidMove(computerMove));
-//        System.out.println("Computer chose " + computerMove);
         placeMove(computerMove, 'O');
     }
     //checking if space chosen is available - if board at position is empty then you can play
@@ -101,19 +85,6 @@ public class Game {
         return (position -1) % 3;
     }
 
-    //asks player where they'd like to play - uses isValidMove method to determine if move is valid or not
-//    public void playerTurn(char[][] board, Scanner scan) {
-//        String userInput;
-//        while (true) {
-//            userInput = scan.nextLine();
-//            if (isValidMove(board, userInput)) {
-//                break;
-//            } else {
-//                System.out.println(userInput + " is not a valid move.");
-//            }
-//        }
-//        placeMove(board, userInput,'X');
-//    }
 
     //making the tic-tac-toe board look like tic-tac-toe
     @Override
